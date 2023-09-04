@@ -2,8 +2,11 @@ const hotelsData = require("./data/hotels.json");
 const spotsData = require("./data/spots.json");
 
 const express = require("express");
+const cors = require('cors')
 const app = express();
 const port = 3000;
+
+app.use(cors())
 
 app.get("/", (req, res) => {
   res.send(`Travel guru app is running on the port ${port}`);
